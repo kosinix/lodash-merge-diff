@@ -1,0 +1,29 @@
+{
+  "name": "lodash-merge-diff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosinix/lodash-merge-diff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kosinix/lodash-merge-diff/issues"
+  },
+  "homepage": "https://github.com/kosinix/lodash-merge-diff#readme",
+  "dependencies": {
+    "lodash.foreach": "^4.5.0",
+    "lodash.get": "^4.4.2",
+    "lodash.set": "^4.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}
