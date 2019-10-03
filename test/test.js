@@ -105,3 +105,40 @@ describe("Prop present on orig but not on patch is ignored", () => {
         });
     });
 });
+
+describe("Orig Date object is null/undefined", () => {
+    it("should prevent null error", async () => {
+
+        let orig = {
+        }
+        let patch = {
+            birthDate: new Date('1993-01-02')
+        }
+
+        let result = {}
+        differ(orig, patch, result);
+
+        expect(result).to.eql({
+            birthDate: new Date('1993-01-02')
+        });
+
+        
+    });
+});
+
+describe("Function compare", () => {
+    it("should not do anything", async () => {
+
+        let orig = {
+            fn: ()=>{}
+        }
+        let patch = {
+            fn: function(){}
+        }
+
+        let result = {}
+        differ(orig, patch, result);
+
+        expect(result).to.eql({});
+    });
+});
